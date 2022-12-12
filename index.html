@@ -26,5 +26,55 @@
         <img class="about__image" src="img/solar-panel.png">
       </div>
     </section>
+
+    <section class="form">
+      <div class="form__container">
+        <h1 >Оставьте свои контакты</h1>
+        <p>Поможем подобрать модель.<br>Выбрать удобный вариант доставки и установки.<br>Гарантия возврата денег.</p>
+         <form>
+        <div class="form__group">
+          <label for="name">Ваше имя</label>
+          <input type="text" placeholder="Введите имя" id="name">
+          <label for="email">Электронный адрес</label>
+          <input type="email" placeholder="***@yandex.ru" id="email">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" placeholder="7 (999) 999-99-99" id="phone">
+          <label for="budget">Примерный бюджет</label>
+            <select id="budget">
+            <option value min="10" max="30">10 000₽ – 30 000₽</option>
+            <option value min="30" max="60">30 000₽ – 60 000₽</ption>
+            <option value min="60" max="100">60 000₽ – 100 000₽</option>
+            <option value min="100">100 000₽</option>
+            </select>
+          <button type="submit" class="form__submit">Отправить заявку</button>
+        </div>
+      </form>
+    </section>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__group">
+          <h3>Позвонить нам:</h3>
+          <div class="footer__links">
+            <a href="tel:74959999999">+7 (495) 999-99-99</a>
+          </div>
+        </div>
+        <div class="footer__group">
+          <h3>Решения для дома:</h3>
+          <div class="footer__links">
+            <a href="#">Солнечные панели GreenRobotic</a>
+            <a href="#">Системы солнечных панелей GreenStation</a>
+          </div>
+        </div>
+        <div class="footer__group">
+          <h3>Компания</h3>
+          <div class="footer__links">
+            <a href="#">Контакты</a>
+            <a href="#">Вакансии</a>
+            <a href="#">СМИ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">GreenCorp © 2021</div>
+    </footer>
 </body>
 </html>
