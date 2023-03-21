@@ -1,26 +1,42 @@
-const INCREASE_NUMBER_ANIMATION_SPEED = 40;
-function increaseNumberAnimationStep(i, elementCount, endNumber) {
+const INCREASE_NUMBER_ANIMATION_SPEED = 50;
+
+function increaseNumberAnimationStep (i, element, endNumber) {
   if (i <= endNumber) {
     if (i === endNumber) {
-      elementCount.innerText = i + "+";
+      element.innerText = i + '+';
     } else {
-      elementCount.innerText = i;
-      //console.log(i);
+      element.innerText = i;
     }
-    i = i + 100;
 
-    setTimeout(
-      increaseNumberAnimationStep,
-      INCREASE_NUMBER_ANIMATION_SPEED,
-      i,
-      elementCount,
-      endNumber
-    );
+    i+=100;
+      
+ setTimeout(function() {
+	increaseNumberAnimationStep(i, element, endNumber);
+}, INCREASE_NUMBER_ANIMATION_SPEED);
+}
+}
+
+function initIncreaseNumberAnimation () {
+	const element = document.querySelector(".features__clients-count");
+	increaseNumberAnimationStep(0, element, 5000)
+}
+
+
+document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
+  if (event.target.value === 'other') {
+    const formContainer = document.createElement('div');
+    formContainer.classList.add('form__group');
+    formContainer.classList.add('form__other-input');
+ 
+    const input = document.createElement('input');
+    input.placeholder = "Введите ваш вариант";
+    input.type = "text";
+ 
+    formContainer.appendChild(input);
+    document.querySelector('#form form').insertBefore(formContainer, document.querySelector('.form__submit')); 
   }
-}
-function initIncreaseNumberAnimation() {
-  const begin = 0;
-  const end = 5000;
-  const elementC = document.querySelector(".features__clients-count");
-  increaseNumberAnimationStep(begin, elementC, end);
-}
+ 
+  if (event.target.value !== 'other') {
+    // ...
+  }
+});
