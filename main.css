@@ -3,13 +3,19 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: sticky;
-    background: #fff;
+    position: fixed;
+    background-color: rgba(255 255 255 / 0%);
+    transition: background-color 0.25s ease;
     top: 0;
     z-index: 1;
+    left: 0;
+    right: 0;
   }
 
-
+  .header__scrolled {
+    background-color: rgba(255 255 255 / 100%);
+    box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
+  }
 
 
 @keyframes rotation {
@@ -178,7 +184,7 @@ input {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 115px;
+    padding-top: 200px;
     padding-bottom: 115px;
     /* ... */
     position: relative;
